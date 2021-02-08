@@ -1,0 +1,57 @@
+#!/bin/bash
+
+#проверка наличия файла в каталоге
+#if [ -f isit.txt ]
+#then echo файл isit.txt существует!
+#else echo файл isit.txt не найден!
+#fi
+
+# пример работы цикла
+#count=42
+#if [ $count -eq 42 ]
+#then
+#  echo "42 является корректным значением."
+#elif [ $count -gt 42 ]
+#then
+#  echo "Слишком мало"
+#else
+#  echo "не достаточно"
+#fi
+
+#Отработка цикла for
+
+#for i in 1 2 4
+#do 
+#  echo $i
+#done
+#отсчет
+
+#for counter in {1..20}
+#do
+#   echo отсчет от 1 до 20, текущее значение $counter
+#   sleep 0,1
+#done
+
+#перемещение файла по шаблону
+#for file in /home/sinegubov/PycharmProjects/pythonProject/*.py  
+#do mv $file /home/sinegubov/ZIP/rezer_python/ 
+#done
+
+#цикл while
+#i=100;
+#while [ $i -ge 0 ] ;
+#do
+#   echo Обратный отсчет от 100 до 0, текущее значение $i;
+#   let i--;
+#   sleep 1
+#done
+
+read -r a b # Читаем переменные, переданные на стандартный ввод
+c=0
+while [ $a -le $b ]
+do
+  let "c+=a";
+  let a++;
+done
+echo $c
+
